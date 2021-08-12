@@ -1,0 +1,45 @@
+.review {
+	display: grid;
+	align-items: center;
+
+	font-size: 14px;
+	line-height: 24px;
+	grid-template-columns: 30px 1fr auto auto;
+	gap: 15px 10px;
+	grid-template-areas: "user title date rating" "description description description description";
+}
+
+.user {
+	grid-area: user;
+}
+
+.title {
+	grid-area: title;
+}
+
+.name {
+	margin-right: 3px;
+
+	font-weight: bold;
+}
+
+.date {
+	grid-area: date;
+}
+
+.rating {
+	grid-area: rating;
+
+	margin-left: 10px;
+}
+
+.description {
+	grid-area: description;
+}
+
+@media screen and (max-width: 860px) {
+	.review {
+		grid-template-columns: 30px 1fr auto;
+		grid-template-areas: "user title title" "date date rating" "description description description";
+	}
+}

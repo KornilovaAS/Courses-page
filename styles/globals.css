@@ -1,0 +1,36 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+
+	color: var(--black);
+	background: var(--background);
+
+	font-family: var(--font-family);
+}
+
+a {
+	text-decoration: none;
+
+	color: inherit;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--background: #F9F8FF;
+	--black: #3B434E;
+	--grey: #A4A4A4;
+	--grey-light: #EBEBEB;
+	--grey-dark: #6D7279;
+	--white: white;
+	--primary: #7351F5;
+	--primary-hover: #6344DF;
+	--ghost-hover: #B3C0D9;
+	--red: #FC836D;
+	--green: #127A4F;
+	--green-light: #C8F8E4;
+	--font-family: 'Noto Sans KR', sans-serif;
+}

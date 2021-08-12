@@ -1,0 +1,105 @@
+.reviewForm {
+	display: grid;
+	align-items: center;
+
+	font-size: 14px;
+	line-height: 24px;
+	grid-template-columns: auto auto 1fr auto;
+	grid-template-areas: "name title . rating" "textarea textarea textarea textarea" "submit submit submit submit";
+	gap: 20px;
+}
+
+.inputName {
+	grid-area: name;
+}
+
+.inputTitle {
+	grid-area: title;
+}
+
+.rating {
+	grid-area: rating;
+
+	display: flex;
+}
+
+.rating > span {
+	margin-right: 20px;
+}
+
+.textareaWrapper {
+	grid-area: textarea;
+}
+
+.submit {
+	grid-area: submit;
+}
+
+.submit > span {
+	margin-left: 13px;
+}
+
+.success {
+	display: grid;
+	align-items: center;
+
+	margin-top: 20px;
+	padding: 20px;
+
+	border-radius: 5px;
+	background: var(--green-light);
+	grid-template-columns: 1fr 40px;
+	grid-template-areas: "succsesTitle closeIcon" "succsesDescription succsesDescription";
+}
+
+.error {
+	border: 1px solid #DE0000;
+	border-radius: 5px;
+	background: #EFB7B9;
+}
+
+.successTitle,
+.errorTitle {
+	grid-area: succsesTitle;
+
+	font-weight: bold;
+}
+
+.closeIcon {
+	grid-area: closeIcon;
+	justify-self: right;
+
+	align-self: flex-start;
+
+	border: none;
+	background: none;
+}
+
+.closeIconError {
+	grid-area: closeIcon;
+	justify-self: right;
+
+	align-self: flex-start;
+
+	border: none;
+	background: none;
+}
+
+.succsesDescription,
+.errorDescription {
+	grid-area: succsesDescription;
+}
+
+@media screen and (max-width: 1100px) {
+	.reviewForm {
+		grid-template-columns: auto 1fr;
+		grid-template-areas: "name title" "textarea textarea" "rating rating" "submit submit";
+	}
+}
+
+@media screen and (max-width: 890px) {
+	.reviewForm {
+		grid-template-columns: 1fr;
+		grid-template-areas: "name" "title" "textarea" "rating" "submit";
+	}
+}

@@ -1,0 +1,19 @@
+.advantage {
+	display: grid;
+	grid-template-columns: 50px 1fr;
+	gap: 10px 40px;
+
+	margin-bottom: 30px;
+}
+
+.advantage svg {
+	align-self: center;
+}
+
+.title {
+	align-self: center;
+}
+
+.vline {
+	border-left: 1px solid var(--grey-light);
+}
